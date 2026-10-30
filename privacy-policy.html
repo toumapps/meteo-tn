@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Météo TN – Confidentialité</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  /* Layout: a single readable column, like an official notice; a deep-sea band carries the app's name. */
+  :root {
+    --bg: #f5f7fa;
+    --paper: #ffffff;
+    --ink: #17233a;
+    --muted: #55627a;
+    --line: #dde3ec;
+    --sea: #1e3c72;
+    --sun: #f2b81f;
+    --display: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --body: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1626; --paper: #152036; --ink: #e6ebf4; --muted: #a3afc4; --line: #283652;
+      --sea: #2a5298; --sun: #f5c542; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1626; --paper: #152036; --ink: #e6ebf4; --muted: #a3afc4; --line: #283652;
+    --sea: #2a5298; --sun: #f5c542; color-scheme: dark;
+  }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; }
+  .band { background: var(--sea); color: #fff; }
+  .wrap {
+    max-width: 720px; margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .band .wrap { padding-block: 36px 30px; display: flex; gap: 16px; align-items: center; }
+  .mark { flex: none; width: 52px; height: 52px; border-radius: 12px; }
+  .band h1 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 5vw, 34px); line-height: 1.15; margin: 0; text-wrap: balance; }
+  .band p { margin: 4px 0 0; opacity: .85; font-size: 15px; }
+  main .wrap { padding-block: 28px 56px; }
+  .lead { color: var(--muted); margin: 0 0 8px; }
+  section { padding-block: 18px; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: 0; }
+  h2 { font-family: var(--display); font-weight: 600; font-size: 21px; line-height: 1.3; margin: 0 0 6px; text-wrap: balance; }
+  h2 .n { color: var(--sun); font-variant-numeric: tabular-nums; margin-right: 8px; }
+  p { margin: 0 0 10px; max-width: 65ch; }
+  a { color: inherit; text-decoration-color: var(--sun); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
+  .meta { font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <svg class="mark" viewBox="0 0 108 108" aria-hidden="true">
+      <rect width="108" height="108" fill="#24467f"/>
+      <circle cx="62" cy="42" r="15" fill="#FFD54F"/>
+      <path d="M30 78 L76 78 A12 12 0 0 0 76 54 A17 17 0 0 0 44 50 A14 14 0 0 0 30 78Z" fill="#fff"/>
+      <circle cx="48" cy="66" r="8.5" fill="#E70013"/>
+      <circle cx="50.6" cy="66" r="6.8" fill="#fff"/>
+      <path d="M53.6 62.4 l1.2 2.6 2.8 .2 -2.2 1.8 .8 2.8 -2.6 -1.6 -2.4 1.6 .8 -2.8 -2.2 -1.8 2.8 -.2z" fill="#E70013"/>
+    </svg>
+    <div>
+      <h1>Politique de confidentialité – Météo TN</h1>
+      <p>Application Android com.toumapps.meteotn · Dernière mise à jour : 30 octobre 2026</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="lead">Cette politique explique quelles données l'application Météo TN utilise, pourquoi, et avec qui elles sont partagées. L'application ne demande ni compte, ni nom, ni adresse e-mail.</p>
+
+    <section>
+      <h2><span class="n">1</span>Position de l'appareil</h2>
+      <p>Si vous appuyez sur « Ma position » et l'autorisez, l'application lit la position de votre téléphone (approximative ou précise) uniquement pendant son utilisation. Elle s'en sert sur votre téléphone pour choisir la ville ou le port tunisien le plus proche. La position n'est pas enregistrée sur un serveur, et l'application n'accède jamais à votre position en arrière-plan. Vous pouvez refuser cette autorisation et choisir votre ville dans la liste.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span>Prévisions météo et marines</h2>
+      <p>Pour afficher la météo et l'état de la mer, l'application envoie au service <a href="https://open-meteo.com">Open-Meteo</a> les coordonnées de la ville ou du port choisi (pas votre position exacte). Comme pour tout site web, Open-Meteo reçoit aussi l'adresse IP de la connexion. Aucune autre information personnelle n'est envoyée.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span>Publicité (Google AdMob)</h2>
+      <p>L'application est gratuite grâce à la publicité fournie par Google AdMob. Pour afficher et mesurer les annonces, Google peut collecter l'identifiant publicitaire de l'appareil, l'adresse IP, des informations sur l'appareil et des données d'interaction avec les annonces. Selon vos choix, les annonces peuvent être personnalisées ou non.</p>
+      <p>Dans l'Espace économique européen, au Royaume-Uni et en Suisse, un formulaire de consentement de Google s'affiche au premier lancement ; vous pouvez modifier vos choix à tout moment avec le lien « Choix publicitaires » en bas de l'écran. Partout, vous pouvez réinitialiser ou supprimer votre identifiant publicitaire dans les réglages Android (Google &gt; Annonces).</p>
+      <p>Pour en savoir plus : <a href="https://policies.google.com/technologies/partner-sites">comment Google utilise les données des applications partenaires</a> et <a href="https://policies.google.com/privacy">règles de confidentialité de Google</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span>Données enregistrées sur le téléphone</h2>
+      <p>L'application garde sur votre téléphone la dernière ville, le dernier port et le dernier onglet choisis, pour les retrouver à la prochaine ouverture. Ces informations restent sur l'appareil et disparaissent si vous désinstallez l'application.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">5</span>Ce que nous ne faisons pas</h2>
+      <p>Nous ne vendons pas de données, nous ne créons pas de compte utilisateur, et nous ne collectons ni contacts, ni photos, ni messages.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span>Enfants</h2>
+      <p>L'application ne s'adresse pas spécialement aux enfants de moins de 13 ans.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">7</span>Sécurité</h2>
+      <p>Les échanges avec Open-Meteo et Google AdMob se font par connexion chiffrée (HTTPS).</p>
+    </section>
+
+    <section>
+      <h2><span class="n">8</span>Modifications</h2>
+      <p>Cette politique peut être mise à jour ; la date en haut de la page indique la dernière version.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">9</span>Contact</h2>
+      <p>Pour toute question, contactez le développeur à l'adresse e-mail indiquée sur la fiche Google Play de l'application Météo TN.</p>
+      <p class="meta">Prévisions indicatives : avant de sortir en mer, consultez toujours le bulletin officiel de l'INM (meteo.tn) et la capitainerie du port.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>
